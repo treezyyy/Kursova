@@ -24,13 +24,10 @@ import javafx.stage.Stage;
 public class HelloController {
 
     @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
-    @FXML
     private Button AufButton;
+
+    @FXML
+    private Text AutText;
 
     @FXML
     private Button LoginButton;
@@ -40,13 +37,6 @@ public class HelloController {
 
     @FXML
     private TextField PasswordField;
-
-    @FXML
-    private Text AutText;
-
-
-    @FXML
-    private Text MainText;
 
     @FXML
     void initialize() {
@@ -64,13 +54,13 @@ public class HelloController {
         Font myFont2 = null;
 
         try {
-            myFont2 = Font.loadFont(new FileInputStream(new File("src/main/resources/com/example/kursova/fonts/Rubik Mono One Regular.ttf")), 31);
+            myFont2 = Font.loadFont(new FileInputStream(new File("D:\\JavaProject\\Kursova\\src\\main\\resources\\com\\example\\kursova\\fonts\\BebasNeue Book.otf")), 70);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
         try {
-            myFont = Font.loadFont(new FileInputStream(new File("src/main/resources/com/example/kursova/fonts/Rubik Mono One Regular.ttf")), 8);
+            myFont = Font.loadFont(new FileInputStream(new File("src/main/resources/com/example/kursova/fonts/Rubik Mono One Regular.ttf")), 10);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -87,8 +77,7 @@ public class HelloController {
         LoginField.setFont(myFont);
         AufButton.setFont(myFont);
 
-        AutText.setFont(myFont1);
-        MainText.setFont(myFont2);
+        AutText.setFont(myFont2);
 
         LoginButton.setOnAction(actionEvent -> {
             openNewScene("SignApp.fxml");
@@ -142,4 +131,3 @@ public class HelloController {
         stage.show();
     }
 }
-

@@ -8,13 +8,18 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
 
 public class SignAppController {
+
     @FXML
     private Button BackButton;
 
@@ -23,9 +28,6 @@ public class SignAppController {
 
     @FXML
     private CheckBox CheckBoxWomen;
-
-    @FXML
-    private Text MainText;
 
     @FXML
     private TextField PasswordFields;
@@ -38,9 +40,31 @@ public class SignAppController {
 
     @FXML
     private TextField SignSurname;
+    @FXML
+    private Text registration;
+
 
     @FXML
     void initialize(){
+        Font bebas = null;
+        Font bebas20 = null;
+        try {
+            bebas = Font.loadFont(new FileInputStream(new File("D:\\JavaProject\\Kursova\\src\\main\\resources\\com\\example\\kursova\\fonts\\BebasNeue Bold.otf")), 70);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            bebas20 = Font.loadFont(new FileInputStream(new File("D:\\JavaProject\\Kursova\\src\\main\\resources\\com\\example\\kursova\\fonts\\BebasNeue Bold.otf")), 20);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
+
+        registration.setFont(bebas);
+        RegistrationButton.setFont(bebas20);
+
+        BackButton.setFont(bebas20);
 
 
         RegistrationButton.setOnAction(actionEvent -> {
