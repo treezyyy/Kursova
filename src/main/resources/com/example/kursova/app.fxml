@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?define customFont Font.loadFont(getClass().getResource("/Fonts/Rubik Mono One Regular.ttf").toExternalForm(), 12)?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #282d3e;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursova.MainWindowController">
+    <children>
+        <Text fx:id="MainText" fill="#ededed" layoutX="190.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ГИБДД HELPER" wrappingWidth="319.66600036621094">
+            <font>
+                <Font name="Rubik Mono One Regular" size="31.0" />
+            </font>
+        </Text>
+        <AnchorPane layoutY="80.0" prefHeight="320.0" prefWidth="700.0" style="-fx-background-color: d6d6d6;">
+         <children>
+            <ImageView fitHeight="64.0" fitWidth="78.0" layoutX="622.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/police.png" />
+               </image>
+            </ImageView>
+         </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
