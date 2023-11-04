@@ -1,5 +1,6 @@
 package com.example.kursova;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -50,7 +51,7 @@ public class SignAppController {
         });
 
         BackButton.setOnAction(actionEvent -> {
-            openNewScene("hello-veiw.fxml");
+            openNewScene1("hello-view.fxml");
         });
     }
 
@@ -76,8 +77,7 @@ public class SignAppController {
         }
 
     }
-
-    public void openNewScene(String Window){
+    public void openNewScene1(String Window){
         BackButton.getScene().getWindow().hide();
 
         FXMLLoader loader = new FXMLLoader();
@@ -88,11 +88,15 @@ public class SignAppController {
             throw new RuntimeException(e);
         }
 
+
         Parent root = loader.getRoot();
+
         Stage stage = new Stage();
         Scene scene = new Scene(root); // Создайте объект Scene и передайте корневой элемент
         stage.setScene(scene); // Установите сцену на этапе
-        stage.showAndWait();
+        stage.show();
     }
+
+
 
 }

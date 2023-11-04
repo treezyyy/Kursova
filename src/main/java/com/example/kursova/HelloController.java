@@ -134,11 +134,12 @@ public class HelloController {
         }
 
         Parent root = loader.getRoot();
+
+
         Stage stage = new Stage();
         Scene scene = new Scene(root); // Создайте объект Scene и передайте корневой элемент
         stage.setScene(scene); // Установите сцену на этапе
-        stage.showAndWait();
+        stage.show();
     }
-
 }
 
