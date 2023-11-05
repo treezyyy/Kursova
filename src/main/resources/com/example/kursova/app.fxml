@@ -11,12 +11,11 @@
 <?import javafx.scene.text.Font?>
 <?define customFont Font.loadFont(getClass().getResource("/Fonts/Rubik Mono One Regular.ttf").toExternalForm(), 12)?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="845.0" prefWidth="1310.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="845.0" prefWidth="1310.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursova.MainWindowController">
    <left>
       <VBox prefHeight="200.0" prefWidth="320.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="CENTER" prefHeight="380.0" prefWidth="100.0" style="-fx-background-color: #EBC95E; -fx-background-radius: 0 0 50 50;">
+            <VBox alignment="CENTER" prefHeight="380.0" prefWidth="320.0" style="-fx-background-color: #EBC95E; -fx-background-radius: 50 50 50 50;">
                <children>
                   <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -33,7 +32,7 @@
                   </Label>
                </children>
             </VBox>
-            <VBox alignment="CENTER" prefHeight="450.0" prefWidth="300.0" style="-fx-background-color: ffffff;">
+            <VBox alignment="CENTER" prefHeight="450.0" prefWidth="300.0" style="-fx-background-color: transparent;">
                <VBox.margin>
                   <Insets left="10.0" right="10.0" />
                </VBox.margin>
@@ -46,7 +45,7 @@
                         <Insets left="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label prefHeight="23.0" prefWidth="306.0" text="+7-xxx-xx-xx-xxx" textFill="#bcbcbc">
+                  <Label fx:id="MobilePhone" prefHeight="23.0" prefWidth="306.0" text="+7-xxx-xx-xx-xxx" textFill="#bcbcbc">
                      <font>
                         <Font name="Corbel Bold" size="20.0" />
                      </font>
@@ -62,7 +61,7 @@
                         <Insets left="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label prefHeight="23.0" prefWidth="417.0" text="+7-xxx-xx-xx-xxx" textFill="#bcbcbc">
+                  <Label fx:id="WorkPhone" prefHeight="23.0" prefWidth="417.0" text="+7-xxx-xx-xx-xxx" textFill="#bcbcbc">
                      <font>
                         <Font name="Corbel Bold" size="20.0" />
                      </font>
@@ -78,7 +77,7 @@
                         <Insets left="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label prefHeight="23.0" prefWidth="446.0" text="*@mail.ru" textFill="#bcbcbc">
+                  <Label fx:id="emailField" prefHeight="23.0" prefWidth="446.0" text="*@mail.ru" textFill="#bcbcbc">
                      <font>
                         <Font name="Corbel Bold" size="20.0" />
                      </font>
@@ -86,7 +85,7 @@
                         <Insets left="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #EBC95E; -fx-background-radius: 50;" text="Изменить">
+                  <Button fx:id="EditButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #EBC95E; -fx-background-radius: 50;" text="Изменить">
                      <font>
                         <Font name="Corbel Bold" size="20.0" />
                      </font>
@@ -100,41 +99,164 @@
       </VBox>
    </left>
    <top>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="98.0" prefWidth="1310.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" style="-fx-background-color: #EBC95E; -fx-background-radius: 50;" text="Нарешение">
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
+            <HBox alignment="CENTER" prefHeight="98.0" prefWidth="1103.0">
+               <children>
+                  <Button fx:id="close" mnemonicParsing="false" style="-fx-background-color: #EBC95E; -fx-background-radius: 20;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../assets/close.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Otmetit" mnemonicParsing="false" style="-fx-background-color: #EBC95E; -fx-background-radius: 50;" text="Отметить нарушение">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="checkShter" mnemonicParsing="false" style="-fx-background-color: #EBC95E; -fx-background-radius: 50;" text="Проверить штраф">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #EBC95E; -fx-background-radius: 50;" text="Мой автомобиль">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #EBC95E; -fx-background-radius: 50;" text="Информация о происшествиях">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Corbel Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/police-car.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="320.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #EBC95E; -fx-background-radius: 50 0 0 50;">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/information%20(1).png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" top="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Пришло время планового ТО">
+                     <HBox.margin>
+                        <Insets left="10.0" top="40.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Corbel Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #EBC95E; -fx-background-radius: 50 0 0 50;">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/information%20(1).png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" top="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="44.0" prefWidth="241.0" text="Продумайте маршрут: &#10;ДТП на Пушкина">
+                     <HBox.margin>
+                        <Insets left="10.0" top="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Corbel Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #EBC95E; -fx-background-radius: 50 0 0 50;">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/information%20(1).png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" top="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="44.0" prefWidth="241.0" text="Время менять резину: &#10;15 ноября заморозки">
+                     <HBox.margin>
+                        <Insets left="10.0" top="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Corbel Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #EBC95E; -fx-background-radius: 50 50 0 0;" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Вызвать эвакутор: 91-19-11 ">
                <font>
                   <Font name="Corbel Bold" size="20.0" />
                </font>
-            </Button>
-            <Button mnemonicParsing="false" style="-fx-background-color: #EBC95E; -fx-background-radius: 50;" text="Проверить штраф">
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
+            </Label>
+            <Label text="Аварийный комиссар: 454-454-454">
                <font>
                   <Font name="Corbel Bold" size="20.0" />
                </font>
-            </Button>
-            <Button mnemonicParsing="false" style="-fx-background-color: #EBC95E; -fx-background-radius: 50;" text="Информация о происшествиях">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
+            </Label>
+            <Label text="СТО: 22-11-17 ">
                <font>
                   <Font name="Corbel Bold" size="20.0" />
                </font>
-            </Button>
-            <Button mnemonicParsing="false" style="-fx-background-color: #EBC95E; -fx-background-radius: 50;" text="Мой автомобиль">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
-               <font>
-                  <Font name="Corbel Bold" size="20.0" />
-               </font>
-            </Button>
+            </Label>
          </children>
       </HBox>
-   </top>
+   </bottom>
 </BorderPane>

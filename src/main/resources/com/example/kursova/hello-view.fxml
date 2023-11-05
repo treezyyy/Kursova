@@ -20,12 +20,12 @@
                   <Font name="BebasNeueBold" size="70.0" />
                </font>
             </Text>
-            <TextField fx:id="LoginField" layoutX="109.0" layoutY="236.0" prefHeight="62.0" prefWidth="298.0" promptText="Login" style="-fx-background-radius: 5; -fx-background-color: #cccccc;">
+            <TextField fx:id="LoginField" layoutX="109.0" layoutY="236.0" prefHeight="62.0" prefWidth="298.0" promptText="Login" style="-fx-background-radius: 5; -fx-background-color: transpanent; -fx-border-color: #EBC95E; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font name="Rubik Mono One Regular" size="10.0" />
                </font>
             </TextField>
-            <TextField fx:id="PasswordField" layoutX="107.0" layoutY="330.0" prefHeight="62.0" prefWidth="298.0" promptText="Password" style="-fx-background-radius: 5; -fx-background-color: #cccccc;">
+            <TextField fx:id="PasswordField" layoutX="107.0" layoutY="330.0" prefHeight="62.0" prefWidth="298.0" promptText="Password" style="-fx-background-radius: 5; -fx-background-color: transpanent;">
                <font>
                   <Font name="Rubik Mono One Regular" size="10.0" />
                </font>
