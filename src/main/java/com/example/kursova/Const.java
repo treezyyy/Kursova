@@ -9,5 +9,7 @@ public class Const
     public static final String USERS_USERNAME = "userName";
     public static final String USERS_PASSWORD = "password";
     public static final String USERS_GENDER = "gendere";
+    public static final String USERS_PHONE = "phone";
+    public static final String USERS_EMAIL = "email";
 
 }

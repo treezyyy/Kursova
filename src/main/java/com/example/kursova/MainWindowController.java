@@ -20,6 +20,9 @@ public class MainWindowController {
     private ResourceBundle resources;
 
     @FXML
+    private Button mayAvto;
+
+    @FXML
     private URL location;
 
     @FXML
@@ -44,6 +47,9 @@ public class MainWindowController {
     private Button Otmetit;
 
     @FXML
+    private Label NameLabel;
+
+    @FXML
     void initialize() {
         EditButton.setOnAction(actionEvent -> {
             openNewScenes("sitter.fxml");
@@ -66,7 +72,16 @@ public class MainWindowController {
 
         });
 
+        mayAvto.setOnAction(actionEvent -> {
+            openNewScenes("moyAvto.fxml");
+
+        });
+
+
+
     }
+
+
 
 
 

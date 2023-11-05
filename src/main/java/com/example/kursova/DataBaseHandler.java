@@ -17,13 +17,15 @@ public class DataBaseHandler extends Configs{
 
     public void signUpUser(User user) throws SQLException, ClassNotFoundException {
         String insert = "INSERT INTO " + Const.USER_TABLE + "(" + Const.USERS_FIRSTNAME + "," + Const.USERS_USERNAME + ","
-                + Const.USERS_PASSWORD + "," + Const.USERS_GENDER + ")" + "VALUES(?,?,?,?)";
+                + Const.USERS_PASSWORD + "," + Const.USERS_GENDER + "," + Const.USERS_PHONE + "," + Const.USERS_EMAIL + ")" + "VALUES(?,?,?,?,?,?)";
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(insert);
             prSt.setString(1, user.getFirstName());
             prSt.setString(2, user.getUserName());
             prSt.setString(3, user.getPassword());
             prSt.setString(4, user.getGendere());
+            prSt.setString(5, user.getPhone());
+            prSt.setString(6, user.getEmail());
             prSt.executeUpdate();
         } catch (SQLException | ClassNotFoundException e){
             e.printStackTrace();

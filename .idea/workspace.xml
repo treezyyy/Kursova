@@ -4,23 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38e8edcd-635a-4560-a1b2-7433883e8e57" name="Changes" comment="123">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kursova/CheckSht.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kursova/NarushController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kursova/SitterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/information (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/information.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/police-car.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/kursova/Narush.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/kursova/checkSht.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/kursova/sitter.fxml" afterDir="false" />
+    <list default="true" id="38e8edcd-635a-4560-a1b2-7433883e8e57" name="Changes" comment="рпапрапаррпа">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kursova/MoyAvtoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/left-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/notes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/police-station.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/reminder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/stamp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/suv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/warning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/kursova/MoyAvto.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kursova/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/kursova/Const.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kursova/DataBaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/kursova/DataBaseHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kursova/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/kursova/MainWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kursova/SignAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/kursova/SignAppController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kursova/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/kursova/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/kursova/SignApp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/kursova/SignApp.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/kursova/app.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/kursova/app.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/kursova/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/kursova/hello-view.fxml" afterDir="false" />
     </list>
@@ -114,12 +114,20 @@
       <option name="project" value="LOCAL" />
       <updated>1699132677964</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="рпапрапаррпа">
+      <created>1699211721816</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699211721816</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="123" />
-    <option name="LAST_COMMIT_MESSAGE" value="123" />
+    <MESSAGE value="рпапрапаррпа" />
+    <option name="LAST_COMMIT_MESSAGE" value="рпапрапаррпа" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

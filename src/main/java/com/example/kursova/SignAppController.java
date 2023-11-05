@@ -30,6 +30,12 @@ public class SignAppController {
     private CheckBox CheckBoxWomen;
 
     @FXML
+    private TextField EmailField;
+
+    @FXML
+    private TextField MobilePhone;
+
+    @FXML
     private TextField PasswordFields;
 
     @FXML
@@ -40,6 +46,7 @@ public class SignAppController {
 
     @FXML
     private TextField SignSurname;
+
     @FXML
     private Text registration;
 
@@ -84,13 +91,15 @@ public class SignAppController {
         String userName = SignName.getText();
         String login = SignSurname.getText();
         String password = PasswordFields.getText();
+        String phone = MobilePhone.getText();
+        String email = EmailField.getText();
         String gender = "";
         if (CheckBoxMen.isSelected())
             gender = "Мужской";
         else
             gender = "Женский";
 
-        User user = new User(userName,login,password,gender);
+        User user = new User(userName,login,password,gender,phone,email);
 
         try {
             dbHandler.signUpUser(user);
