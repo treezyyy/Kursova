@@ -1,4 +1,5 @@
 package com.example.kursova;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -46,4 +47,58 @@ public class DataBaseHandler extends Configs{
         }
         return resSet;
     }
+
+    public String getNameFromDB(int idusers) throws SQLException, ClassNotFoundException {
+        Connection conn = getDbConnection();
+        PreparedStatement stmt = conn.prepareStatement("SELECT * FROM " + Const.USER_TABLE + " WHERE " + Const.USERS_ID + " = ?");
+        stmt.setInt(1, idusers);
+        ResultSet rs = stmt.executeQuery();
+        String name = null;
+        if (rs.next()) {
+            name = rs.getString("userName");
+        }
+        conn.close();
+        return name;
+    }
+
+    public String getMobileFromDB(int idusers) throws SQLException, ClassNotFoundException {
+        Connection conn = getDbConnection();
+        PreparedStatement stmt = conn.prepareStatement("SELECT * FROM " + Const.USER_TABLE + " WHERE " + Const.USERS_ID + " = ?");
+        stmt.setInt(1, idusers);
+        ResultSet rs = stmt.executeQuery();
+        String name = null;
+        if (rs.next()) {
+            name = rs.getString("phone");
+        }
+        conn.close();
+        return name;
+    }
+
+    public String getEmailFromDB(int idusers) throws SQLException, ClassNotFoundException {
+        Connection conn = getDbConnection();
+        PreparedStatement stmt = conn.prepareStatement("SELECT * FROM " + Const.USER_TABLE + " WHERE " + Const.USERS_ID + " = ?");
+        stmt.setInt(1, idusers);
+        ResultSet rs = stmt.executeQuery();
+        String name = null;
+        if (rs.next()) {
+            name = rs.getString("email");
+        }
+        conn.close();
+        return name;
+    }
+
+
+    public int getIdFromDB(String userName) throws SQLException, ClassNotFoundException {
+        Connection conn = getDbConnection();
+        PreparedStatement stmt = conn.prepareStatement("SELECT * FROM " + Const.USER_TABLE + " WHERE " + Const.USERS_USERNAME + " = ?");
+        stmt.setString(1, userName);
+        ResultSet rs = stmt.executeQuery();
+        int id = 0;
+        if (rs.next()) {
+            id = rs.getInt("idusers");
+        }
+        conn.close();
+        return id;
+    }
+
 }

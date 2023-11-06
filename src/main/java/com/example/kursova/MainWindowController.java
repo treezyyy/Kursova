@@ -2,8 +2,11 @@ package com.example.kursova;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import com.example.kursova.animations.Shake;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -50,7 +53,18 @@ public class MainWindowController {
     private Label NameLabel;
 
     @FXML
-    void initialize() {
+    void initialize() throws SQLException, ClassNotFoundException {
+
+        DataBaseHandler dbHandler = new DataBaseHandler();
+        int id = dbHandler.getIdFromDB(HelloController.login);
+        System.out.println(HelloController.login);
+        String name = dbHandler.getNameFromDB(id);
+        NameLabel.setText(name);
+        String phone = dbHandler.getMobileFromDB(id);
+        MobilePhone.setText(phone);
+        String email = dbHandler.getEmailFromDB(id);
+        emailField.setText(email);
+
         EditButton.setOnAction(actionEvent -> {
             openNewScenes("sitter.fxml");
 
@@ -76,11 +90,7 @@ public class MainWindowController {
             openNewScenes("moyAvto.fxml");
 
         });
-
-
-
-    }
-
+        }
 
 
 

@@ -38,17 +38,19 @@ public class HelloController {
     @FXML
     private TextField PasswordField;
 
+    static String login;
+
     @FXML
     void initialize() {
         AufButton.setOnAction(actionEvent -> {
             String loginText = LoginField.getText().trim();
+            login = loginText;
             String loginPassword = PasswordField.getText().trim();
             if (!loginText.equals("") && !loginPassword.equals(""))
                 loginUser(loginText, loginPassword);
             else
                 System.out.println("login and password is empty");
         });
-
         Font myFont = null;
         Font myFont1 = null;
         Font myFont2 = null;
