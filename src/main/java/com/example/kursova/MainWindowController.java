@@ -1,7 +1,10 @@
 package com.example.kursova;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.URL;
+import java.net.URLConnection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -18,6 +21,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.scene.image.ImageView;
+import org.json.JSONObject;
 
 public class MainWindowController {
 
@@ -67,6 +71,12 @@ public class MainWindowController {
     private ImageView IMAGE;
 
     @FXML
+    private Label weather1;
+
+    @FXML
+    private Label CITY;
+
+    @FXML
     void initialize() throws SQLException, ClassNotFoundException {
 
         DataBaseHandler dbHandler = new DataBaseHandler();
@@ -86,7 +96,7 @@ public class MainWindowController {
         thirdinfo.setText(Info3);
         String mali = dbHandler.getMaleFromDB(HelloController.login);
         Image image = new Image("D:\\JavaProject\\Kursova\\src\\main\\resources\\assets\\profile.png");
-        if(mali.equals("Женский")){
+        if (mali.equals("Женский")) {
             IMAGE.setImage(image);
         }
         EditButton.setOnAction(actionEvent -> {
@@ -114,12 +124,21 @@ public class MainWindowController {
             openNewScenes("moyAvto.fxml");
 
         });
+
+        String getUserCity = CITY.getText().trim();
+        System.out.println(getUserCity);
+        if (!getUserCity.equals("")) { // Если данные не пустые
+            // Получаем данные о погоде с сайта openweathermap
+            String output = getUrlContent("http://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&appid=78922bde8b970c1d07d3ce24e7e2dfb5&units=metric");
+            JSONObject obj = new JSONObject(output);
+            weather1.setText("Температура: " + obj.getJSONObject("main").getDouble("temp"));
+            System.out.println(output);
+
         }
+    }
 
 
-
-
-    public void openNewScenes(String Window){
+    public void openNewScenes(String Window) {
         EditButton.getScene().getWindow();
 
         FXMLLoader loader = new FXMLLoader();
@@ -139,7 +158,7 @@ public class MainWindowController {
         stage.show();
     }
 
-    public void openNewSceneses(String Window){
+    public void openNewSceneses(String Window) {
         EditButton.getScene().getWindow().hide();
 
         FXMLLoader loader = new FXMLLoader();
@@ -158,4 +177,26 @@ public class MainWindowController {
         stage.setScene(scene); // Установите сцену на этапе
         stage.show();
     }
-}
+
+
+
+    private static String getUrlContent(String urlAdress) {
+        StringBuffer content = new StringBuffer();
+
+        try {
+            URL url = new URL(urlAdress);
+            URLConnection urlConn = url.openConnection();
+
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConn.getInputStream()));
+            String line;
+
+            while((line = bufferedReader.readLine()) != null) {
+                content.append(line + "\n");
+            }
+            bufferedReader.close();
+        } catch(Exception e) {
+            System.out.println("Такой город был не найден!");
+        }
+        return content.toString();
+    }
+    }

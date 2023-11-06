@@ -4,6 +4,8 @@ public class Const
 {
     public static final String USER_TABLE = "users";
     public static final String SHT_TABLE = "shtraf";
+    public static final String INFO_TABLE = "carinfo";
+    public static final String INFO_VIN = "vin";
 
     public static final String SHT_NOMER = "nomer";
     public static final String INFORMATIONS_TABLESECOND = "informations";

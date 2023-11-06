@@ -1,10 +1,6 @@
 package com.example.kursova;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.ResultSet;
+import java.sql.*;
 
 
 public class DataBaseHandler extends Configs{
@@ -61,6 +57,100 @@ public class DataBaseHandler extends Configs{
         conn.close();
         return name;
     }
+
+    public String getVinFromDB(int idusers) throws SQLException, ClassNotFoundException {
+        Connection conn = getDbConnection();
+        PreparedStatement stmt = conn.prepareStatement("SELECT * FROM " + Const.USER_TABLE + " WHERE " + Const.USERS_ID + " = ?");
+        stmt.setInt(1, idusers);
+        ResultSet rs = stmt.executeQuery();
+        String vin = null;
+        if (rs.next()) {
+            vin = rs.getString("vin");
+        }
+        conn.close();
+        return vin;
+    }
+
+
+    public String getVinInMarkaFromDB(String vinj) throws SQLException, ClassNotFoundException {
+        Connection conn = getDbConnection();
+        PreparedStatement stmt = conn.prepareStatement("SELECT * FROM " + Const.INFO_TABLE + " WHERE " + Const.INFO_VIN + " = ?");
+        stmt.setString(1, vinj);
+        ResultSet rs = stmt.executeQuery();
+        String vin = null;
+        if (rs.next()) {
+            vin = rs.getString("marka");
+        }
+        conn.close();
+        return vin;
+    }
+
+    public String getVinColorFromDB(String vinj) throws SQLException, ClassNotFoundException {
+        Connection conn = getDbConnection();
+        PreparedStatement stmt = conn.prepareStatement("SELECT * FROM " + Const.INFO_TABLE + " WHERE " + Const.INFO_VIN + " = ?");
+        stmt.setString(1, vinj);
+        ResultSet rs = stmt.executeQuery();
+        String color = null;
+        if (rs.next()) {
+            color = rs.getString("color");
+        }
+        conn.close();
+        return color;
+    }
+
+    public String getRashodFromDB(String vinj) throws SQLException, ClassNotFoundException {
+        Connection conn = getDbConnection();
+        PreparedStatement stmt = conn.prepareStatement("SELECT * FROM " + Const.INFO_TABLE + " WHERE " + Const.INFO_VIN + " = ?");
+        stmt.setString(1, vinj);
+        ResultSet rs = stmt.executeQuery();
+        String rashod = null;
+        if (rs.next()) {
+            rashod = rs.getString("rashod");
+        }
+        conn.close();
+        return rashod;
+    }
+
+
+    public String getVuFromDB(String vinj) throws SQLException, ClassNotFoundException {
+        Connection conn = getDbConnection();
+        PreparedStatement stmt = conn.prepareStatement("SELECT * FROM " + Const.INFO_TABLE + " WHERE " + Const.INFO_VIN + " = ?");
+        stmt.setString(1, vinj);
+        ResultSet rs = stmt.executeQuery();
+        String vu = null;
+        if (rs.next()) {
+            vu = rs.getString("vu");
+        }
+        conn.close();
+        return vu;
+    }
+
+    public String getkatogoryFromDB(String vinj) throws SQLException, ClassNotFoundException {
+        Connection conn = getDbConnection();
+        PreparedStatement stmt = conn.prepareStatement("SELECT * FROM " + Const.INFO_TABLE + " WHERE " + Const.INFO_VIN + " = ?");
+        stmt.setString(1, vinj);
+        ResultSet rs = stmt.executeQuery();
+        String katogory = null;
+        if (rs.next()) {
+            katogory = rs.getString("katogory");
+        }
+        conn.close();
+        return katogory;
+    }
+
+    public String getbuksirFromDB(String vinj) throws SQLException, ClassNotFoundException {
+        Connection conn = getDbConnection();
+        PreparedStatement stmt = conn.prepareStatement("SELECT * FROM " + Const.INFO_TABLE + " WHERE " + Const.INFO_VIN + " = ?");
+        stmt.setString(1, vinj);
+        ResultSet rs = stmt.executeQuery();
+        String buksir = null;
+        if (rs.next()) {
+            buksir = rs.getString("buksir");
+        }
+        conn.close();
+        return buksir;
+    }
+
 
     public String getVinFromDB(String login) throws SQLException, ClassNotFoundException {
         Connection conn = getDbConnection();

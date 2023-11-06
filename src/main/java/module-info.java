@@ -12,6 +12,7 @@ module com.example.kursova {
     requires com.almasb.fxgl.all;
     requires java.sql;
     requires mysql.connector.j;
+    requires org.json;
     requires lombok;
 
 
