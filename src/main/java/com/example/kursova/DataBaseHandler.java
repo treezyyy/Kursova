@@ -87,6 +87,19 @@ public class DataBaseHandler extends Configs{
         return name;
     }
 
+    public String getFirstInfoFromDB(int idinformations) throws SQLException, ClassNotFoundException {
+        Connection conn = getDbConnection();
+        PreparedStatement stmt = conn.prepareStatement("SELECT * FROM " + Const.INFORMATIONS_TABLESECOND + " WHERE " + Const.INFORMATIONS_ID + " = ?");
+        stmt.setInt(1, idinformations);
+        ResultSet rs = stmt.executeQuery();
+        String name = null;
+        if (rs.next()) {
+            name = rs.getString("information");
+        }
+        conn.close();
+        return name;
+    }
+
 
     public int getIdFromDB(String userName) throws SQLException, ClassNotFoundException {
         Connection conn = getDbConnection();

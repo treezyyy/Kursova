@@ -23,7 +23,16 @@ public class MainWindowController {
     private ResourceBundle resources;
 
     @FXML
+    private Label firstInfo;
+
+    @FXML
     private Button mayAvto;
+
+    @FXML
+    private Label secondinfo;
+
+    @FXML
+    private Label thirdinfo;
 
     @FXML
     private URL location;
@@ -64,6 +73,12 @@ public class MainWindowController {
         MobilePhone.setText(phone);
         String email = dbHandler.getEmailFromDB(id);
         emailField.setText(email);
+        String Info1 = dbHandler.getFirstInfoFromDB(1);
+        String Info2 = dbHandler.getFirstInfoFromDB(2);
+        String Info3 = dbHandler.getFirstInfoFromDB(3);
+        firstInfo.setText(Info1);
+        secondinfo.setText(Info2);
+       thirdinfo.setText(Info3);
 
         EditButton.setOnAction(actionEvent -> {
             openNewScenes("sitter.fxml");

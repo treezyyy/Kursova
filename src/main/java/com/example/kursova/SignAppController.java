@@ -1,5 +1,6 @@
 package com.example.kursova;
 
+import com.example.kursova.animations.Shake;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -99,15 +100,22 @@ public class SignAppController {
         else
             gender = "Женский";
 
-        User user = new User(userName,login,password,gender,phone,email);
 
-        try {
-            dbHandler.signUpUser(user);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
+        if(PhoneValidator.isValidEmail(phone)){
+            User user = new User(userName,login,password,gender,phone,email);
+            try {
+                dbHandler.signUpUser(user);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        } else {
+            Shake PhoneAnim = new Shake(MobilePhone);
+            PhoneAnim.playAnim();
         }
+
+
 
     }
     public void openNewScene1(String Window){
