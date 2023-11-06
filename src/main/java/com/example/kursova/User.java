@@ -13,4 +13,5 @@ public class User {
     private String gendere;
     private String phone;
     private String email;
+    private String vin;
 }

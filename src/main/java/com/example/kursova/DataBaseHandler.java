@@ -18,7 +18,7 @@ public class DataBaseHandler extends Configs{
 
     public void signUpUser(User user) throws SQLException, ClassNotFoundException {
         String insert = "INSERT INTO " + Const.USER_TABLE + "(" + Const.USERS_FIRSTNAME + "," + Const.USERS_USERNAME + ","
-                + Const.USERS_PASSWORD + "," + Const.USERS_GENDER + "," + Const.USERS_PHONE + "," + Const.USERS_EMAIL + ")" + "VALUES(?,?,?,?,?,?)";
+                + Const.USERS_PASSWORD + "," + Const.USERS_GENDER + "," + Const.USERS_PHONE + "," + Const.USERS_EMAIL + "," + Const.USERS_VIN + ")" + "VALUES(?,?,?,?,?,?,?)";
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(insert);
             prSt.setString(1, user.getFirstName());
@@ -27,6 +27,7 @@ public class DataBaseHandler extends Configs{
             prSt.setString(4, user.getGendere());
             prSt.setString(5, user.getPhone());
             prSt.setString(6, user.getEmail());
+            prSt.setString(7, user.getVin());
             prSt.executeUpdate();
         } catch (SQLException | ClassNotFoundException e){
             e.printStackTrace();
@@ -56,6 +57,19 @@ public class DataBaseHandler extends Configs{
         String name = null;
         if (rs.next()) {
             name = rs.getString("userName");
+        }
+        conn.close();
+        return name;
+    }
+
+    public String getVinFromDB(String login) throws SQLException, ClassNotFoundException {
+        Connection conn = getDbConnection();
+        PreparedStatement stmt = conn.prepareStatement("SELECT * FROM " + Const.USER_TABLE + " WHERE " + Const.USERS_USERNAME + " = ?");
+        stmt.setString(1, login);
+        ResultSet rs = stmt.executeQuery();
+        String name = null;
+        if (rs.next()) {
+            name = rs.getString("vin");
         }
         conn.close();
         return name;
@@ -112,6 +126,47 @@ public class DataBaseHandler extends Configs{
         }
         conn.close();
         return id;
+    }
+
+
+    public String getMaleFromDB(String userName) throws SQLException, ClassNotFoundException {
+        Connection conn = getDbConnection();
+        PreparedStatement stmt = conn.prepareStatement("SELECT * FROM " + Const.USER_TABLE + " WHERE " + Const.USERS_USERNAME + " = ?");
+        stmt.setString(1, userName);
+        ResultSet rs = stmt.executeQuery();
+        String male = null;
+        if (rs.next()) {
+            male = rs.getString("gendere");
+        }
+        conn.close();
+        return male;
+    }
+
+
+    public String getShtFromDB(String Nomer) throws SQLException, ClassNotFoundException {
+        Connection conn = getDbConnection();
+        PreparedStatement stmt = conn.prepareStatement("SELECT * FROM " + Const.SHT_TABLE + " WHERE " + Const.SHT_NOMER + " = ?");
+        stmt.setString(1, Nomer);
+        ResultSet rs = stmt.executeQuery();
+        String sht = null;
+        if (rs.next()) {
+            sht = rs.getString("first");
+        }
+        conn.close();
+        return sht;
+    }
+
+    public String getShtSecondFromDB(String Nomer) throws SQLException, ClassNotFoundException {
+        Connection conn = getDbConnection();
+        PreparedStatement stmt = conn.prepareStatement("SELECT * FROM " + Const.SHT_TABLE + " WHERE " + Const.SHT_NOMER + " = ?");
+        stmt.setString(1, Nomer);
+        ResultSet rs = stmt.executeQuery();
+        String sht = null;
+        if (rs.next()) {
+            sht = rs.getString("second");
+        }
+        conn.close();
+        return sht;
     }
 
 }

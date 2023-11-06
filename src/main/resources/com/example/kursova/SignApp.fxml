@@ -75,7 +75,7 @@
                   <Cursor fx:constant="CROSSHAIR" />
                </cursor>
             </Button>
-            <Text id="Registration" fx:id="registration" layoutX="507.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Регистрация">
+            <Text id="Registration" fx:id="registration" layoutX="508.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Регистрация">
                <font>
                   <Font name="BebasNeueBold" size="70.0" />
                </font>
@@ -86,6 +86,11 @@
                </font>
             </TextField>
             <TextField fx:id="EmailField" alignment="CENTER" layoutX="507.0" layoutY="591.0" prefHeight="50.0" prefWidth="304.0" promptText="email" style="-fx-background-radius: 5; -fx-background-color: #cccccc;">
+               <font>
+                  <Font name="Rubik Mono One Regular" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="vin" alignment="CENTER" layoutX="507.0" layoutY="213.0" prefHeight="50.0" prefWidth="304.0" promptText="VIN" style="-fx-background-radius: 5; -fx-background-color: #cccccc;">
                <font>
                   <Font name="Rubik Mono One Regular" size="12.0" />
                </font>

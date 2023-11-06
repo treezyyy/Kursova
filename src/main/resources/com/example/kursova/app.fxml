@@ -17,7 +17,7 @@
          <children>
             <VBox alignment="CENTER" prefHeight="380.0" prefWidth="320.0" style="-fx-background-color: #EBC95E; -fx-background-radius: 50 50 50 50;">
                <children>
-                  <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="IMAGE" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../assets/ava.png" />
                      </image>

@@ -15,7 +15,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javafx.scene.image.ImageView;
 
 public class MainWindowController {
 
@@ -62,6 +64,9 @@ public class MainWindowController {
     private Label NameLabel;
 
     @FXML
+    private ImageView IMAGE;
+
+    @FXML
     void initialize() throws SQLException, ClassNotFoundException {
 
         DataBaseHandler dbHandler = new DataBaseHandler();
@@ -78,8 +83,12 @@ public class MainWindowController {
         String Info3 = dbHandler.getFirstInfoFromDB(3);
         firstInfo.setText(Info1);
         secondinfo.setText(Info2);
-       thirdinfo.setText(Info3);
-
+        thirdinfo.setText(Info3);
+        String mali = dbHandler.getMaleFromDB(HelloController.login);
+        Image image = new Image("D:\\JavaProject\\Kursova\\src\\main\\resources\\assets\\profile.png");
+        if(mali.equals("Женский")){
+            IMAGE.setImage(image);
+        }
         EditButton.setOnAction(actionEvent -> {
             openNewScenes("sitter.fxml");
 

@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="845.0" prefWidth="1310.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <left>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="380.0" BorderPane.alignment="CENTER">
@@ -205,7 +204,7 @@
                   <Insets top="10.0" />
                </VBox.margin>
             </ImageView>
-            <Label text="LANOS">
+            <Label fx:id="marka" text="LANOS">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
@@ -213,7 +212,7 @@
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </Label>
-            <Label text="VIN: 123123123123">
+            <Label fx:id="vinLabel" text="VIN: 123123123123">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
@@ -221,7 +220,7 @@
                   <Insets top="10.0" />
                </VBox.margin>
             </Label>
-            <Label text="Цвет: красный">
+            <Label fx:id="colorcar" text="Цвет: красный">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
@@ -229,7 +228,7 @@
                   <Insets top="10.0" />
                </VBox.margin>
             </Label>
-            <Label text="Расход: 8л">
+            <Label fx:id="rashod" text="Расход: 8л">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
@@ -237,7 +236,7 @@
                   <Insets top="10.0" />
                </VBox.margin>
             </Label>
-            <Label text="В/У: 123123112323">
+            <Label fx:id="vu" text="В/У: 123123112323">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
@@ -245,7 +244,7 @@
                   <Insets top="10.0" />
                </VBox.margin>
             </Label>
-            <Label text="Последнее ТО: 11.11.23">
+            <Label fx:id="kategory" text="Категория: B">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
@@ -253,15 +252,7 @@
                   <Insets top="10.0" />
                </VBox.margin>
             </Label>
-            <Label text="Категория: B">
-               <font>
-                  <Font name="Arial Bold" size="20.0" />
-               </font>
-               <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin>
-            </Label>
-            <Label text="Разрешение к буксировке: Да">
+            <Label fx:id="buks" text="Разрешение к буксировке: Да">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>

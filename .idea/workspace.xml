@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38e8edcd-635a-4560-a1b2-7433883e8e57" name="Changes" comment="БД на первом окне">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/kursova/PhoneValidator.java" afterDir="false" />
+    <list default="true" id="38e8edcd-635a-4560-a1b2-7433883e8e57" name="Changes" comment="бд некст">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/profile.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kursova/CheckSht.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/kursova/CheckSht.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kursova/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/kursova/Const.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kursova/DataBaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/kursova/DataBaseHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kursova/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/kursova/MainWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kursova/MoyAvtoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/kursova/MoyAvtoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kursova/SignAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/kursova/SignAppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/kursova/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/kursova/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/kursova/MoyAvto.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/kursova/MoyAvto.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/kursova/SignApp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/kursova/SignApp.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/kursova/app.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/kursova/app.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,14 +129,22 @@
       <option name="project" value="LOCAL" />
       <updated>1699285456938</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="бд некст">
+      <created>1699288856248</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699288856248</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="123" />
     <MESSAGE value="рпапрапаррпа" />
     <MESSAGE value="БД на первом окне" />
-    <option name="LAST_COMMIT_MESSAGE" value="БД на первом окне" />
+    <MESSAGE value="бд некст" />
+    <option name="LAST_COMMIT_MESSAGE" value="бд некст" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

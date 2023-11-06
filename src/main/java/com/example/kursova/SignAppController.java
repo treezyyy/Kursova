@@ -49,7 +49,11 @@ public class SignAppController {
     private TextField SignSurname;
 
     @FXML
+    private TextField vin;
+
+    @FXML
     private Text registration;
+
 
 
     @FXML
@@ -94,6 +98,7 @@ public class SignAppController {
         String password = PasswordFields.getText();
         String phone = MobilePhone.getText();
         String email = EmailField.getText();
+        String vinn = vin.getText();
         String gender = "";
         if (CheckBoxMen.isSelected())
             gender = "Мужской";
@@ -102,7 +107,7 @@ public class SignAppController {
 
 
         if(PhoneValidator.isValidEmail(phone)){
-            User user = new User(userName,login,password,gender,phone,email);
+            User user = new User(userName,login,password,gender,phone,email,vinn);
             try {
                 dbHandler.signUpUser(user);
             } catch (SQLException e) {
