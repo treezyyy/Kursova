@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="Kursova">
+    <output-path>$PROJECT_DIR$/out/artifacts/Kursova</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="com.example.kursova.HelloApplication" />
+        <option name="description" value="" />
+        <option name="height" value="845" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="nativeBundle" value="all" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+        <option name="width" value="1310" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="Kursova.jar">
+        <element id="module-output" name="Kursova" />
+      </element>
+    </root>
+  </artifact>
+</component>

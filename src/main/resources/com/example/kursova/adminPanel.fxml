@@ -25,12 +25,12 @@
    <left>
       <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #EBC95E;" BorderPane.alignment="CENTER">
          <children>
-            <TextField promptText="Новый логин" style="-fx-background-color: transporent; -fx-background-radius: 5; -fx-border-color: #EBC95E; -fx-border-width: #EBC95E;">
+            <TextField fx:id="newLog" promptText="Новый логин" style="-fx-background-color: transporent; -fx-background-radius: 5; -fx-border-color: #EBC95E; -fx-border-width: #EBC95E;">
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>
             </TextField>
-            <TextField promptText="Новый пароль" style="-fx-background-color: transporent; -fx-background-radius: 5; -fx-border-color: #EBC95E; -fx-border-width: #EBC95E;">
+            <TextField fx:id="newPass" promptText="Новый пароль" style="-fx-background-color: transporent; -fx-background-radius: 5; -fx-border-color: #EBC95E; -fx-border-width: #EBC95E;">
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>
@@ -49,22 +49,17 @@
    <right>
       <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #EBC95E;" BorderPane.alignment="CENTER">
          <children>
-            <TextField promptText="Новый телефон" style="-fx-background-color: transporent; -fx-background-radius: 5; -fx-border-color: #EBC95E; -fx-border-width: #EBC95E;">
+            <TextField fx:id="newNumber" promptText="Новый телефон" style="-fx-background-color: transporent; -fx-background-radius: 5; -fx-border-color: #EBC95E; -fx-border-width: #EBC95E;">
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>
             </TextField>
-            <TextField promptText="Новый email" style="-fx-background-color: transporent; -fx-background-radius: 5; -fx-border-color: #EBC95E; -fx-border-width: #EBC95E;">
+            <TextField fx:id="newMail" promptText="Новый email" style="-fx-background-color: transporent; -fx-background-radius: 5; -fx-border-color: #EBC95E; -fx-border-width: #EBC95E;">
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>
             </TextField>
-            <TextField promptText="Новый vin" style="-fx-background-color: transporent; -fx-background-radius: 5; -fx-border-color: #EBC95E; -fx-border-width: #EBC95E;">
-               <VBox.margin>
-                  <Insets top="20.0" />
-               </VBox.margin>
-            </TextField>
-            <TextField promptText="Новый пароль" style="-fx-background-color: transporent; -fx-background-radius: 5; -fx-border-color: #EBC95E; -fx-border-width: #EBC95E;">
+            <TextField fx:id="newVin" promptText="Новый vin" style="-fx-background-color: transporent; -fx-background-radius: 5; -fx-border-color: #EBC95E; -fx-border-width: #EBC95E;">
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>
@@ -80,4 +75,11 @@
          </BorderPane.margin>
       </VBox>
    </right>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="correntId" promptText="Укажите id" style="-fx-background-color: transporent; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #EBC95E;" />
+         </children>
+      </VBox>
+   </center>
 </BorderPane>
