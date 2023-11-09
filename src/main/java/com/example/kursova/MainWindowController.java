@@ -77,6 +77,10 @@ public class MainWindowController {
     private Label CITY;
 
     @FXML
+    private Label davlyak;
+    @FXML
+    private Label oshus;
+    @FXML
     void initialize() throws SQLException, ClassNotFoundException {
 
         DataBaseHandler dbHandler = new DataBaseHandler();
@@ -131,7 +135,9 @@ public class MainWindowController {
             // Получаем данные о погоде с сайта openweathermap
             String output = getUrlContent("http://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&appid=78922bde8b970c1d07d3ce24e7e2dfb5&units=metric");
             JSONObject obj = new JSONObject(output);
-            weather1.setText("Температура: " + obj.getJSONObject("main").getDouble("temp"));
+            weather1.setText("" + obj.getJSONObject("main").getDouble("temp"));
+            davlyak.setText("" + obj.getJSONObject("main").getDouble("pressure"));
+            oshus.setText("" + obj.getJSONObject("main").getDouble("feels_like"));
             System.out.println(output);
 
         }

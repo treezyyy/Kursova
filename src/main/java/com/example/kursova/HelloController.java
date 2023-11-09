@@ -46,10 +46,12 @@ public class HelloController {
             String loginText = LoginField.getText().trim();
             login = loginText;
             String loginPassword = PasswordField.getText().trim();
-            if (!loginText.equals("") && !loginPassword.equals(""))
+            if(loginText.equals("balandin") && loginPassword.equals("123")){
+                openNewScene("adminPanel.fxml");
+            } else{if (!loginText.equals("") && !loginPassword.equals(""))
                 loginUser(loginText, loginPassword);
             else
-                System.out.println("login and password is empty");
+                System.out.println("login and password is empty");}
         });
         Font myFont = null;
         Font myFont1 = null;
